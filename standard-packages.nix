@@ -18,6 +18,7 @@ with pkgs.lib;
       pkgs.vim
       pkgs.atom
       pkgs.python
+      pkgs.mono
       pkgs.wineUnstable
     ];
   };
