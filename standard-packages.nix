@@ -3,25 +3,22 @@ with pkgs.lib;
 {
   config =
   {
-    nixpkgs.config.chromium =
-    {
-      enablePepperFlash = true;
-      enablePepperPDF = true;
-    };
-
     nixpkgs.config.allowUnfree = true;
 
+    nixpkgs.config.firefox = {
+      enableGoogleTalkPlugin = true;
+      enableAdobeFlash = true;
+    };
 
-
-  environment.systemPackages =
-  [
-    #pkgs.stdenv
-    pkgs.chromium
-    pkgs.firefox
-    pkgs.git
-    pkgs.vim
-    pkgs.python
-    pkgs.wineUnstable
-  ];
+    environment.systemPackages =
+    [
+      pkgs.stdenv
+      pkgs.firefoxWrapper
+      pkgs.git
+      pkgs.vim
+      pkgs.atom
+      pkgs.python
+      pkgs.wineUnstable
+    ];
   };
 }
