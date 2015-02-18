@@ -9,6 +9,8 @@
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
       ../../standard-packages.nix
+      ../../standard-env.nix
+      ../../standard-nixpath.nix
     ];
 
   # Use the GRUB 2 boot loader.
@@ -30,8 +32,6 @@
   #   consoleKeyMap = "us";
   #   defaultLocale = "en_US.UTF-8";
   # };
-
-  time.timeZone = "America/Denver";
 
   # List services that you want to enable:
 
